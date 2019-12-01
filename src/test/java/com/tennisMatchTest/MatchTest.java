@@ -17,12 +17,12 @@ public class MatchTest {
 		match = new Match(PLAYER1, PLAYER2);
 	}
 
-//	@Test
-//	public void test_pointWon() {
-//		match.pointWonBy(PLAYER1.getName());
-//		match.pointWonBy(PLAYER2.getName());
-//	}
-//
+	@Test
+	public void test_pointWon() {
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+	}
+
 	@Test
 	public void test_deuceWinscore() {
 		match.pointWonBy(PLAYER1.getName());
@@ -67,6 +67,33 @@ public class MatchTest {
 		
 		match.pointWonBy(PLAYER1.getName());
 		assertEquals("1-0", match.score()); //7-5
+	}
+	
+	@Test
+	public void test_tieBreakSIXSIXWinscore() {
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		assertEquals("0-0, 15-15", match.score());
+		
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		assertEquals("0-0, 30-30", match.score());
+		
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		assertEquals("0-0, Deuce", match.score());
+		
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER2.getName());
+		assertEquals(false, match.isTieBreak());//6-6
+		
+		match.pointWonBy(PLAYER1.getName());
+		match.pointWonBy(PLAYER1.getName());
+		assertEquals("1-0", match.score()); 
 	}
 
 }
