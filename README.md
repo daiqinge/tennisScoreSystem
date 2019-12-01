@@ -41,7 +41,7 @@ More information on tennis scoring can be found here https://en.wikipedia.org/wi
 
 ```shell
 git clone https://github.com/daiqinge/tennisScoreSystem
-cd tennisMatchScore
+cd /tennisMatchScore
 ```
 
 ### Install JDK, Maven
