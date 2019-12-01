@@ -13,7 +13,7 @@ public class Match extends AbstractMatch{
 
 	public void pointWonBy(String name) {
 		//case1: at stage of tie break, go deuce
-		if(matchI.isTieBreak()) {
+		if(matchI instanceof MatchPoint && matchI.isTieBreak()) {
 			matchI = new MatchDeuce();
 			return;
 		}
@@ -23,7 +23,6 @@ public class Match extends AbstractMatch{
 		//case2: no one win, add point, go tie break or point
 		Player winner = matchI.winner();
 		if(winner == null) {
-			
 			if(playerSet[0].getScore() == GlobalVal.SIX_POINTS
 					&& playerSet[1].getScore() == GlobalVal.SIX_POINTS) {
 				matchI = new MatchTieBreak();
@@ -43,7 +42,7 @@ public class Match extends AbstractMatch{
 	}
 
 	public boolean isTieBreak() {
-		return false;
+		return matchI.isTieBreak();
 	}
 
 	/**
