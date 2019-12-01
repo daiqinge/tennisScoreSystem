@@ -56,7 +56,6 @@ public class Match extends AbstractMatch{
 		//
 		int index = getLeadPlayerIndex();
 	    Player leadPlayer = playerSet[index];
-	    System.out.println(leadPlayer.getScore());
 		if ((leadPlayer.getScore() >= GlobalVal.FOUR_POINTS 
 				&& Math.abs(playerSet[1].getScore() - playerSet[0].getScore()) >= GlobalVal.TWO_POINTS)
 				|| leadPlayer.getScore() == GlobalVal.SEVEN_POINTS
