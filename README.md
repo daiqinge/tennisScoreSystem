@@ -41,16 +41,10 @@ More information on tennis scoring can be found here https://en.wikipedia.org/wi
 
 ```shell
 git clone https://github.com/daiqinge/tennisScoreSystem
-cd tennis-score
+cd tennisMatchScore
 ```
 
 ### Install JDK, Maven
-
-### Check the code unit test and coverage
-
-```shell
-npm run test
-```
 
 ### Run test
 RUN JUnit
