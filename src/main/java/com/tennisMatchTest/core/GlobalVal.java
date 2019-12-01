@@ -2,7 +2,6 @@ package com.tennisMatchTest.core;
 
 import java.util.HashMap;
 import java.util.Map;
-//import com.tennisMatchTest.bean.Player;
 
 public class GlobalVal {
 	public static final String ADVANTAGE = "Advantage";
@@ -16,10 +15,6 @@ public class GlobalVal {
 	public static final Integer FOUR_POINTS = 4;
 	public static final Integer SIX_POINTS = 6;
 	public static final Integer SEVEN_POINTS = 7;
-//	public static Player player1 = new Player("");
-//	public static Player player2 = new Player("");
-//	private static int[] scoreSet = new int[2];
-//	private static Player[] playerSet = {player1, player2};
 	public static final Map<Integer, Integer> scoreConvertMap = new HashMap<Integer, Integer>();
     static {
     	scoreConvertMap.put(1, 15);
