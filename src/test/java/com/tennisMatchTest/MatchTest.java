@@ -89,7 +89,7 @@ public class MatchTest {
 		match.pointWonBy(PLAYER2.getName());
 		match.pointWonBy(PLAYER1.getName());
 		match.pointWonBy(PLAYER2.getName());
-		assertEquals(false, match.isTieBreak());//6-6
+		assertEquals(true, match.isTieBreak());//6-6
 		
 		match.pointWonBy(PLAYER1.getName());
 		match.pointWonBy(PLAYER1.getName());
