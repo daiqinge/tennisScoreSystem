@@ -23,10 +23,14 @@ public class MatchPoint extends AbstractMatch{
 	public Player winner() {
 		if(playerSet[0].getScore() == GlobalVal.FOUR_POINTS) {
 			scoreSet[0]++;
+			playerSet[0].setScore(0);
+			playerSet[1].setScore(0);
 			return playerSet[0];
 		}
 		if(playerSet[1].getScore() == GlobalVal.FOUR_POINTS) {
 			scoreSet[1]++;
+			playerSet[0].setScore(0);
+			playerSet[1].setScore(0);
 			return playerSet[1];
 		}
 		return null;
