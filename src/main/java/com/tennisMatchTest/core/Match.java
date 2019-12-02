@@ -6,9 +6,9 @@ import com.tennisMatchTest.bean.Player;
 public class Match extends AbstractMatch{
 	private MatchI matchI = new MatchPoint();
 	
-	public Match(Player player1, Player player2) {
-		playerSet[0] = player1;
-		playerSet[1] = player2;
+	public Match(String player1Name, String player2Name) {
+		playerSet[0] = new Player(player1Name);
+		playerSet[1] = new Player(player2Name);
 		scoreSet[0] = 0;
 		scoreSet[1] = 0;
 	}
