@@ -13,7 +13,7 @@ public class MatchTieBreak extends AbstractMatch{
 	}
 
 	public boolean isTieBreak() {
-		return false;
+		return true;
 	}
 
 	public Player winner() {
