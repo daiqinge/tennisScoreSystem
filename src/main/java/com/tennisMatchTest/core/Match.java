@@ -9,6 +9,8 @@ public class Match extends AbstractMatch{
 	public Match(Player player1, Player player2) {
 		playerSet[0] = player1;
 		playerSet[1] = player2;
+		scoreSet[0] = 0;
+		scoreSet[1] = 0;
 	}
 
 	public void pointWonBy(String name) {
