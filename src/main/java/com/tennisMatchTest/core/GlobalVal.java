@@ -17,6 +17,7 @@ public class GlobalVal {
 	public static final Integer SEVEN_POINTS = 7;
 	public static final Map<Integer, Integer> scoreConvertMap = new HashMap<Integer, Integer>();
     static {
+    	scoreConvertMap.put(0, 0);
     	scoreConvertMap.put(1, 15);
     	scoreConvertMap.put(2, 30);
     	scoreConvertMap.put(3, 40);
